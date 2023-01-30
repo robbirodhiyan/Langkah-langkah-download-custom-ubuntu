@@ -1,0 +1,18 @@
+Menjalankan perintah 'apt update' sinkronisasi repository.
+"nano /etc/apt/sources.list" lalu tambahkan kata 'universe' pada akhir setiap baris untuk memperkaya repository.
+'apt update' untuk menyinkronkan lagi.
+'apt install git' untuk menginstall aplikasi kustomisasi tema dan kursor dari repo git.
+'git clone  https://github.com/simtrami/posy-improved-cursor-linux' untuk download paket cursor.
+'git clone https://github.com/vinceliuice/Orchis-theme' untuk download paket tema mojave seperti macos.
+'git clone https://github.com/vinceliuice/McMojave-circle' untuk mendownload paket ikon kustom seperti macos.
+'apt install gtk2-engines-murrine gtk2-engines-pixbuf sassc optipng libglib2.0-dev-bin' untuk memasang beberapa perangkat lunak yang dibutuhkan.
+'apt install gimp inkscape blender kdenlive audacity obs-studio' menginstall software-software utama untuk menunjang produktivitas para pekerja kreatif.
+'cd posy-improved-cursor-linux/' lalu 'cp -r Posy_Cursor /usr/share/icons/"  untuk mengcopy cursor linux posy dari github tadi ke dalam icon lokal lalu 'cd ..' untuk kembali ke folder sebelumnya.
+'cd Orchis-theme/' lalu './install.sh -d /usr/share/themes/' untuk install tema mojave 'cd ..' untuk kembali ke folder sebelumnya.
+'cd McMojave-circle/' lalu './install.sh -d /usr/share/icons/' untuk install icon mojave lalu 'cd ..' untuk kembali ke folder sebelumnya.
+'nano /usr/share/glib-2.0/schemas/10_ubuntu-settings.gschema.override' lalu ganti setiap 'cursor-theme' menjadi sama dengan 'Posy_Cursor', ganti 'theme-name' dan 'gtk-theme' sama dengan 'Orchis-Dark', ganti 'icon-theme' menjadi sama dengan 'McMojave-circle-dark' lalu keluar dan save.
+'apt install --reinstall linux-headers-5.15.0-30 linux-headers-5.15.0-30-lowlatency linux-image-5.15.0-30-lowlatency' digunakan untuk mengkonfigurasi tema plymouth.
+'git clone https://github.com/vikashraghavan/dotLock' untuk mengunduh tema plymouth custom.
+'cd dotLock' lalu ketikan 'cp -r dotLock /usr/share/plymouth/themes/' untuk mengcopy dotlock ke tema plymouth.
+'update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/dotLock/dotLock.plymouth 200' lalu jalankan perintah 'update-alternatives --auto default.plymouth' lalu jalankan 'update-initramfs -u' lalu jalankan 'update-grub'.
+Untuk mengganti wallpaper cari wallpaper dengan ekstensi jpg/png lalu copy ke folder instalasi cubic lalu /usr/share/backgrounds/ lalu ganti nama file dengan nama warty-final-ubuntu.png sehingga keseluruhan kode akan menjadi seperti ini. 'sudo cp -f /home/liant/Downloads/wallpaper.png/home/liant/MY-Nux/custom-root/usr/share/backgrounds/warty-final-ubuntu.png' pada terminal utama.
